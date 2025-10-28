@@ -88,32 +88,57 @@
 // console.log(hasil);
 
 //mencari SEMUA data yang memenuhi kriteria tertentu
-const produk = [
-  { id: 1, nama: "Laptop", harga: 5000000 },
-  { id: 2, nama: "Mouse", harga: 50000 },
-  { id: 3, nama: "Keyboard", harga: 500000 },
-  { id: 4, nama: "Monitor", harga: 150000 },
-];
+// const produk = [
+//   { id: 1, nama: "Laptop", harga: 5000000 },
+//   { id: 2, nama: "Mouse", harga: 50000 },
+//   { id: 3, nama: "Keyboard", harga: 500000 },
+//   { id: 4, nama: "Monitor", harga: 150000 },
+// ];
 
 //filter
-const murah = produk.filter((item) => item.harga < 1000000);
+// const murah = produk.filter((item) => item.harga < 1000000);
 // console.log(murah);
 
 //looping
 
-function cariProdukMurah() {
-  const hasil = [];
-  for (let i = 0; i < produk.length; i++) {
-    if (produk[i].harga < 100000) {
-      hasil.push(produk[i]);
-    }
-  }
-  return hasil;
-}
+// function cariProdukMurah() {
+//   const hasil = [];
+//   for (let i = 0; i < produk.length; i++) {
+//     if (produk[i].harga < 100000) {
+//       hasil.push(produk[i]);
+//     }
+//   }
+//   return hasil;
+// }
 
-const hasil = cariProdukMurah();
-console.log(hasil);
+// const hasil = cariProdukMurah();
+// console.log(hasil);
 
 //maksud dari istilah di pemrograman
 //kapan dipakainya
 
+//this digunakan untuk mengetahui siapa pemilik suatu key di dalam obejct atau menunjuk ke object yg memiliki
+//template literal cara menampilkan teks ke console secara literal menggunakan backtick
+
+// const person = {
+//     name: "Adam",
+//     sayHello: function(){
+//         console.log("halo saya adalah", this.name);
+//         console.log(`Halo saya adalah ${this.name} `);
+//     }
+// }
+
+// person.sayHello()
+
+//parameter adalah wadah yang menrima nilai untuk dikirim ke fungsi
+//argumen adalah nilai yg ditampung parameter
+//parameter bisa lebih dari satu dan memperhatikan 
+//parameter bisa memiliki nilai default
+
+function sapa(name, umur, hobi= "wibu") {
+  console.log(`Halo saya ${name} umur saya ${umur} tahun hobi saya ${hobi} `);
+}
+
+sapa("Fikih", 21, "memancing");
+sapa("Andre", 22);
+sapa("Daniel", 23);
