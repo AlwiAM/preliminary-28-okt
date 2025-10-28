@@ -55,22 +55,21 @@
 // penghitungan total barang - calculation
 
 // pencarian item
-const produk = [
-  { id: 1, nama: "Laptop", harga: 5000000 },
-  { id: 2, nama: "Mouse", harga: 50000 },
-  { id: 3, nama: "Keyboard", harga: 500000 },
-  { id: 4, nama: "Monitor", harga: 150000 },
-];
+// const produk = [
+//   { id: 1, nama: "Laptop", harga: 5000000 },
+//   { id: 2, nama: "Mouse", harga: 50000 },
+//   { id: 3, nama: "Keyboard", harga: 500000 },
+//   { id: 4, nama: "Monitor", harga: 150000 },
+// ];
 
 //mencari produk dengan id 2
-const hasil = produk.find(item => item.id === 99);
+// const hasil = produk.find(item => item.id === 99);
 // method array.find mengembalikan nilai pertama yg ditemukan dan mengembalikan undefined jika tidak ada yg ditemukan
 // yg terjadi dibelakang penggunaan find:
 //1. find akan mencari item pertama apakah item.id === 2, kalau belum sesuai dia akan melakukan perulangan berikutnya
 // 2. kalau find sudah menemukan kondisi yg sesuai item.id === 2, find stop dan return item tersebut
 //3. perulangan berikutnya tidak akan dilakukan oleh find
 //4. kalau find tidak menemukan yg kondisinya sesuai dia akan return undefined
-
 
 // menggunkan loop
 // jalankan perulangan sebanyak data/object di dalam array
@@ -86,4 +85,35 @@ const hasil = produk.find(item => item.id === 99);
 //     break;
 //   }
 // }
+// console.log(hasil);
+
+//mencari SEMUA data yang memenuhi kriteria tertentu
+const produk = [
+  { id: 1, nama: "Laptop", harga: 5000000 },
+  { id: 2, nama: "Mouse", harga: 50000 },
+  { id: 3, nama: "Keyboard", harga: 500000 },
+  { id: 4, nama: "Monitor", harga: 150000 },
+];
+
+//filter
+const murah = produk.filter((item) => item.harga < 1000000);
+// console.log(murah);
+
+//looping
+
+function cariProdukMurah() {
+  const hasil = [];
+  for (let i = 0; i < produk.length; i++) {
+    if (produk[i].harga < 100000) {
+      hasil.push(produk[i]);
+    }
+  }
+  return hasil;
+}
+
+const hasil = cariProdukMurah();
 console.log(hasil);
+
+//maksud dari istilah di pemrograman
+//kapan dipakainya
+
