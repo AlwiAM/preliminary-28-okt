@@ -28,13 +28,13 @@
 // console.log(hasil);
 
 
-const produk = [
-  { id: 1, nama: "Laptop", harga: 5000000 },
-  { id: 2, nama: "Mouse", harga: 50000 },
-  { id: 3, nama: "Keyboard", harga: 500000 },
-  { id: 4, nama: "Monitor", harga: 150000 },
-];
+// const produk = [
+//   { id: 1, nama: "Laptop", harga: 5000000 },
+//   { id: 2, nama: "Mouse", harga: 50000 },
+//   { id: 3, nama: "Keyboard", harga: 500000 },
+//   { id: 4, nama: "Monitor", harga: 150000 },
+// ];
 
-const namaProduk = produk.map(item => item.nama);
-console.log(namaProduk);
+// const namaProduk = produk.map(item => item.nama);
+// console.log(namaProduk);
 
